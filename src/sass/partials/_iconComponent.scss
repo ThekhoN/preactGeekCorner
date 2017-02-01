@@ -1,0 +1,13 @@
+svg.tabIcon {
+  max-width: 30px;
+  height: auto;
+
+  @include breakpoint(640px){
+    max-width: 40px;
+  }
+
+  @include breakpoint(768px){
+    max-width: 60px;
+  }
+
+}

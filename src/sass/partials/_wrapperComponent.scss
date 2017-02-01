@@ -1,0 +1,15 @@
+.OfferWrapper {
+  width: 100%;
+  float: left;
+  margin-bottom: 1.6em;
+}
+
+#app, .MainContainerPreactApp, .RouteContainerWrapper, .fullWidthWrapper {
+  width: 100%;
+  float: left;
+}
+
+.maxWidthWrapper {
+  overflow: hidden;
+  margin: 0 auto;
+}

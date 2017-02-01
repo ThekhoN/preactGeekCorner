@@ -1,0 +1,53 @@
+.exploreMoreCaption {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin-bottom: 1.6em;
+  background: #f2f2f2;
+
+  h2 {
+    font-size: 1.8em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+.heroContainer {
+  width: 100%;
+
+  @include breakpoint(768px){
+    width: 40%;
+  }
+}
+
+.exploreMoreContainer {
+  width: 100%;
+  float: left;
+  text-align: center;
+  @include breakpoint(768px){
+    width: 60%;
+  }
+}
+
+ul.exploreMoreOfferUl {
+  text-align: center;
+
+  li {
+    width: 46%;
+    margin: 1%;
+    display: inline-block;
+    border: 1px solid #f2f2f2;
+
+    @include breakpoint(768px){
+      width: 36%;
+      margin: 1.3% 1.6% 1.3% 1.6%;
+    }
+
+    &:nth-child(1), &:nth-child(2){
+      @include breakpoint(768px){
+        margin-top: 0;
+      }
+    }
+  }
+}

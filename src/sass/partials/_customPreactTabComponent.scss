@@ -1,0 +1,67 @@
+body {
+  font-family:'Fira sans', sans-serif;
+}
+
+.preactTab {
+  width: 100%;
+  float: left;
+  margin-bottom: 0.3em;
+  width: 100%;
+  float: left;
+  background: #ffffff;
+}
+ul.tabList {
+  list-style: none;
+  float: left;
+  width: 100%;
+
+  li {
+    width: 25%;
+    cursor: pointer;
+    border-right: 1px solid #ccc;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    display: inline-block;
+    box-sizing: border-box;
+    color: #603783;
+    font-family: 'font-bold', sans-serif;
+    font-size: 10px;
+
+    @include breakpoint(480px){
+      font-size: 12px;
+    }
+
+    @include breakpoint(640px){
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    &.active {
+      color: red;
+      font-weight: bold;
+    }
+  }
+}
+
+.tabPanel {
+  width: 100%;
+  float: left;
+}
+
+.centerVerticalLiName {
+  width: 100%;
+  float: left;
+  text-align: center;
+  display: table;
+  span {
+    height: 40px;
+    vertical-align: middle;
+    display: table-cell;
+  }
+}

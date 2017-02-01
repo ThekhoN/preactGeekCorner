@@ -1,0 +1,63 @@
+//typography
+.responsiveFontWrapper {
+  li {
+    font-size: 12px;
+
+    @include breakpoint(640px){
+      font-size: 16px
+    }
+  }
+}
+
+//layout
+.responsiveLayoutWrapper {
+  ul {
+    text-align: center;
+    @include breakpoint(640px){
+      padding: 1% 0;
+    }
+  }
+
+  li {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+
+    &:nth-child(1) {
+        margin-top: 0
+    }
+
+    @include breakpoint(640px){
+      width: 31.33%;
+      margin: 0 1% 1.6%;
+      border: 1px solid #cb3e68;
+    }
+
+    @include breakpoint(1024px){
+      width: 24.6%;
+      margin: 0 1% 1.6%
+    }
+
+    @include breakpoint(1280px){
+      width: 21%;
+      margin: 0 1% 1.6%
+    }
+
+    @include breakpoint(1664px){
+      width: 19%;
+    }
+
+    @include breakpoint(max-width 1664px){
+      max-width: 100%;
+    }
+  }
+}
+
+
+//colors
+.offerThemeStyles {
+  li {
+    background: #ffffff;
+  }
+}
