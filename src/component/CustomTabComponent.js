@@ -1,5 +1,21 @@
 import {h} from 'preact'
 
+export const TabNavUnit = ({name, children}) => {
+  return (<div className='tabNavHoverWrapper'>
+    <div className='tabNavUnit'>
+    <div className='iconContainer'>
+      {children}
+    </div>
+    <div className='centerVerticalLiName'>
+      <span className='outerTextSpan'>
+        <span className='innerTextSpan'>
+          {name}
+        </span>
+      </span>
+    </div>
+  </div></div>)
+}
+
 export const TabList = ({children}) => {
   return (<ul className='tabList' role="tablist">
     {children}

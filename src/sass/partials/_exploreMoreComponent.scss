@@ -1,18 +1,87 @@
 .exploreMoreCaption {
-  width: 100%;
-  float: left;
+  position: relative;
   text-align: center;
-  margin-bottom: 1.6em;
-  background: #f2f2f2;
+  padding: 20px 0;
+  box-sizing: border-box;
+  margin-bottom: 2em;
 
   h2 {
-    font-size: 1.8em;
-    font-weight: lighter;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    display: inline-block;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+    padding: 6px;
+    font-size: 18px;
+    color: #2d2648;
+
+    @include breakpoint(768px){
+      font-size: 24px;
+    }
+  }
+  //background: #f2f2f2;
+}
+
+.headerGradientSvgContainer {
+  position: absolute;
+  width: 60%;
+  &.left {
+    left: 0%;
+    bottom: 36px;
+    min-height: 1px;
+    background: #f2581e;
+
+    @include breakpoint(640px){
+      left: -25%;
+    }
+
+    @include breakpoint(1024px){
+      left: -15%;
+
+    }
+
+    @include breakpoint(1280px){
+      background: transparent;
+    }
+  }
+
+  &.right {
+    right: 0%;
+    top: 33px;
+    min-height: 1px;
+    background: #f2581e;
+    @include transform(rotate(180deg));
+
+    @include breakpoint(640px){
+      right: -25%;
+    }
+
+    @include breakpoint(1024px){
+      right: -15%;
+      top: 39px;
+    }
+
+    @include breakpoint(1280px){
+      background: transparent;
+    }
   }
 }
 
+.headerGradientSvgResponsiveWrapper {
+  width: 100%;
+  padding-top: 0;
+  position: relative;
+}
+
+svg.headerGradientSvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+
+  @include breakpoint(1280px){
+    visibility: visible;
+  }
+}
 .heroContainer {
   width: 100%;
 
@@ -49,5 +118,20 @@ ul.exploreMoreOfferUl {
         margin-top: 0;
       }
     }
+  }
+
+  img {
+    @include breakpoint(768px){
+      position: relative;
+      top: 50%;
+      @include transform(translateY(-50%));
+    }
+
+  }
+}
+
+.heroContainer {
+  .reactLazyLoadSpan, .lazyLoadSpanWrapper  {
+    text-align: inherit;
   }
 }

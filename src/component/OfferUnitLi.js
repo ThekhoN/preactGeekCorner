@@ -25,6 +25,7 @@ const OfferUnitLi = ({item, i}) => {
     _classNames = 'OfferUnitX99 dodSuperDeal_unit offerUnits_2_2 dodSuperDealUnit_ev';
     return (
       <li className={_classNames} key={i}>
+        <div className='bgClipWrapper'>
           <div className="offerUnit_innerContWrap">
             <OfferLink item={item}>
               <OfferLinkAfterWrap>
@@ -39,6 +40,7 @@ const OfferUnitLi = ({item, i}) => {
               </OfferLinkAfterWrap>
             </OfferLink>
           </div>
+        </div>
       </li>
     )
   }

@@ -22,17 +22,19 @@ const OfferLiUnit = ({item, i}) => {
     let _classNames = '';
 
     return (<li key={i}>
-      <div className='OfferUnitLi'>
-        <OfferLink item={item}>
-          <OfferLinkAfterWrap>
-            <ImgOfferUnit item={item}/>
-            <OfferNonImgWrap>
-              <TitleOfferUnit item={item}/>
-              <OfferPriceTaglineDiscountWrap item={item}/>
-              <OfferRatingWrap item={item}/>
-            </OfferNonImgWrap>
-          </OfferLinkAfterWrap>
-        </OfferLink>
+      <div className='bgClipWrapper'>
+        <div className='OfferUnitLiWrapper'>
+          <OfferLink item={item}>
+            <OfferLinkAfterWrap>
+              <ImgOfferUnit item={item}/>
+              <OfferNonImgWrap>
+                <TitleOfferUnit item={item}/>
+                <OfferPriceTaglineDiscountWrap item={item}/>
+                <OfferRatingWrap item={item}/>
+              </OfferNonImgWrap>
+            </OfferLinkAfterWrap>
+          </OfferLink>
+        </div>
       </div>
     </li>)
 }

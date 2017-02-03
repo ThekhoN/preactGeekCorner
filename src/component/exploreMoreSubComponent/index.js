@@ -4,11 +4,16 @@ import {h} from 'preact'
 import ImgOfferUnit from '../subComponent/ImgOfferUnit'
 import OfferLink from '../subComponent/OfferLink'
 import ImgOfferUnitRangeNonWrapper from '../subComponent/ImgOfferUnitRangeNonWrapper'
+import {HeaderGradientSvg} from '../iconComponent/icons'
+
 
 export const ExploreMoreHeader = () => (<div className='exploreMoreCaption'>
+<HeaderGradientSvg position='left'/>
   <h2>Explore More</h2>
+<HeaderGradientSvg position='right'/>
 </div>)
-
+//<HeaderGradientSvg position='left'/>
+//<HeaderGradientSvg position='right'/>
 const HeroComponent = ({item}) => {
   const offerName = item.offerName? item.offerName: 'Explore More';
   return (<OfferLink item={item}>

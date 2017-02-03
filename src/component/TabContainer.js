@@ -1,7 +1,7 @@
 import {h, Component, render} from 'preact'
 
 //custom Tabs
-import {TabList, Tab, TabPanel} from './CustomTabComponent'
+import {TabNavUnit, TabList, Tab, TabPanel} from './CustomTabComponent'
 
 import Laptop from './routeOfferComponent/Laptop'
 import Monitor from './routeOfferComponent/Monitor'
@@ -9,9 +9,9 @@ import GamingConsole from './routeOfferComponent/GamingConsole'
 import HardDrive from './routeOfferComponent/HardDrive'
 const tabNames = ['Laptops', 'Monitors', 'Gaming Consoles', 'Hard drives']
 
-import TabNavUnit from './tabNavComponent/TabNavUnit'
-import {LaptopIcon} from './iconComponent/icons'
-
+//import TabNavUnit from './tabNavComponent/TabNavUnit'
+import {ActiveStyleElement, LaptopIcon, MonitorIcon, GamingConsoleIcon, HardDriveIcon} from './iconComponent/icons'
+import CSSTransitionGroup from 'preact-css-transition-group'
 
 class TabContainer extends Component {
 	constructor(props){
@@ -52,27 +52,51 @@ class TabContainer extends Component {
 		const hardDriveData = data.filter(offer=>(
 			offer.eventId === 'HARDDRIVES'
 		))
-
+		//{this.state.active === this.props.index && <ActiveStyleElement/>}
     return(<div className='preactTab'>
         <TabList>
           <Tab index='0' active={active} onClickTab={(e)=>{this.handleOnClickTab(e)}}>
+						<CSSTransitionGroup
+              transitionName="slide"
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}>
+              {this.state.active === 0 && <ActiveStyleElement/>}
+            </CSSTransitionGroup>
 						<TabNavUnit name='Laptops'>
 							<LaptopIcon/>
 						</TabNavUnit>
 					</Tab>
           <Tab index='1' active={active} onClickTab={(e)=>{this.handleOnClickTab(e)}}>
+						<CSSTransitionGroup
+              transitionName="slide"
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}>
+              {this.state.active === 1 && <ActiveStyleElement/>}
+            </CSSTransitionGroup>
 						<TabNavUnit name='Monitors'>
-							<LaptopIcon/>
+							<MonitorIcon/>
 						</TabNavUnit>
 					</Tab>
           <Tab index='2' active={active} onClickTab={(e)=>{this.handleOnClickTab(e)}}>
+						<CSSTransitionGroup
+              transitionName="slide"
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}>
+              {this.state.active === 2 && <ActiveStyleElement/>}
+            </CSSTransitionGroup>
 						<TabNavUnit name='Gaming Consoles'>
-							<LaptopIcon/>
+							<GamingConsoleIcon/>
 						</TabNavUnit>
 					</Tab>
 					<Tab index='3' active={active} onClickTab={(e)=>{this.handleOnClickTab(e)}}>
+						<CSSTransitionGroup
+              transitionName="slide"
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}>
+              {this.state.active === 3 && <ActiveStyleElement/>}
+            </CSSTransitionGroup>
 						<TabNavUnit name='Hard Drives'>
-							<LaptopIcon/>
+							<HardDriveIcon/>
 						</TabNavUnit>
 					</Tab>
         </TabList>
